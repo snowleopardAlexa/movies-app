@@ -13,3 +13,15 @@
     padding-top: 70px;
   }
 }
+
+.page-title {
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 2vw;
+  padding: 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  color: white;
+}
