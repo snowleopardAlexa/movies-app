@@ -1,11 +1,15 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
-import { RestoreIcon, FavoriteIcon, LocationOnIcon, Restore } from "@material-ui/icons";
+import { RestoreIcon, FavoriteIcon, LocationOnIcon } from "@material-ui/icons";
 import { mergeClasses } from "@material-ui/styles";
 
 const useStyles = makeStyles({
     root: {
         width: 500,
+        position: "fixed",
+        bottom: 0,
+        backgroundColor: '#2d313a',
+        zIndex: 100,
     }
 })
 
