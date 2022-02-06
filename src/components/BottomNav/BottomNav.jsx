@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import { RestoreIcon, FavoriteIcon, LocationOnIcon } from "@material-ui/icons";
@@ -14,6 +15,10 @@ const useStyles = makeStyles({
 })
 
 const BottomNav = () => {
+
+const classes = useStyles();
+const [value, setValue] = useState(0);
+
   return (
     <BottomNavigation
       value={value}
