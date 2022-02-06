@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
-import { RestoreIcon, FavoriteIcon, LocationOnIcon } from "@material-ui/icons";
-import { mergeClasses } from "@material-ui/styles";
+import WhatshotIcon from '@mui/icons-material/Whatshot';
+import MovieIcon from '@mui/icons-material/Movie';
+import SearchIcon from '@mui/icons-material/Search';
+import TvIcon from '@mui/icons-material/Tv';
 
 const useStyles = makeStyles({
     root: {
-        width: 500,
+        width: '100%',
         position: "fixed",
         bottom: 0,
-        backgroundColor: '#2d313a',
+        backgroundColor: '#8E0E00',
         zIndex: 100,
     }
 })
@@ -26,11 +28,28 @@ const [value, setValue] = useState(0);
           setValue(newValue);
       }}
       showLabels
-      className={mergeClasses.root}
+      className={classes.root}
     >
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+        <BottomNavigationAction 
+          label="Trending" 
+          icon={<WhatshotIcon />} 
+          style={{ color: "white"}}
+        />
+        <BottomNavigationAction 
+          label="Movies" 
+          icon={<MovieIcon />} 
+          style={{ color: "white"}}
+        />
+        <BottomNavigationAction 
+          label="TV Series" 
+          icon={<TvIcon />} 
+          style={{ color: "white"}}
+        />
+        <BottomNavigationAction 
+          label="Search" 
+          icon={<SearchIcon />} 
+          style={{ color: "white"}}
+        />
     </BottomNavigation>
   );
 };
