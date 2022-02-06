@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import axios from "axios";
 
 const Trending = () => {
@@ -10,7 +11,11 @@ const Trending = () => {
       );
 
       setContent(data.results);
-  }
+  };
+
+  useEffect(() => {
+    fetchTrending();
+  }, []);
 
   return (
    <div>
