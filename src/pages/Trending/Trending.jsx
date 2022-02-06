@@ -23,7 +23,15 @@ const Trending = () => {
        <span className="pageTitle">Trending</span>
        <div className="trending">
          {content && content.map((content) => (
-           <SingleContent key={content.id} />
+           <SingleContent 
+             key={content.id} 
+             id={content.id}
+             poster={content.poster_path}
+             title={content.title || content.name}
+             date={content.first_air_date || content.release_date}
+             media_type={content.media_type}
+             vote_average={content.vote_average}
+          />
          ))}
        </div>
    </div>
