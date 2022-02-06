@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './trending.css';
 import axios from "axios";
 import SingleContent from '../../components/SingleContent/SingleContent';
-import Pagination from '../../components/Pagination/Pagination';
+import CustomPagination from '../../components/CustomPagination/CustomPagination';
 
 const Trending = () => {
 
@@ -37,7 +37,7 @@ const Trending = () => {
           />
          ))}
        </div>
-       <Pagination setPage={setPage} />
+       <CustomPagination setPage={setPage} />
    </div>
   );
 };
