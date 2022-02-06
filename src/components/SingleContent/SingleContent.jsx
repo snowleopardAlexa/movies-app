@@ -1,10 +1,10 @@
 import './singlecontent.css';
-import { img_300 } from "../../config/config";
+import { img_300, unavailable } from "../../config/config";
 
 const SingleContent = ({ id, poster, title, date, media_type, vote_average}) => {
   return (
      <div>
-       <img src={`${img_300}/${poster}`} alt="" />
+       <img src={poster ? `${img_300}/${poster}` : unavailable} alt={title} />
      </div>
   );
 };
