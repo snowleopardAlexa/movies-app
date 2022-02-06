@@ -19,11 +19,12 @@ const CustomPagination = ({ setPage, numOfPages = 10 }) => {
     <div>
         <ThemeProvider theme={darkTheme}>
           <Pagination 
+            className="pagination"
             count={numOfPages} 
             onChange={(e) => handlePaginationChange(e.target.textContent)} 
             hideNextButton
             hidePrevButton
-            color="primary"  
+            color="secondary"  
           />
         </ThemeProvider>
     </div>
