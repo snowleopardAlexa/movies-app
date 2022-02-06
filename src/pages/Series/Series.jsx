@@ -1,7 +1,7 @@
 const Series = () => {
     return (
      <div>
-         <span className="pageTitle"><Select:d></Select:d></span>
+         <span className="pageTitle">series</span>
      </div>
     );
   };

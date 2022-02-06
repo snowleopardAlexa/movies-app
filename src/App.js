@@ -4,9 +4,9 @@ import { Container } from '@material-ui/core';
 import Header from './components/Header/Header';
 import BottomNav from './components/BottomNav/BottomNav';
 import Trending from './pages/Trending/Trending';
-import Movies from './pages/Trending/Trending';
-import Series from './pages/Trending/Trending';
-import Search from './pages/Trending/Trending';
+import Movies from './pages/Movies/Movies';
+import Series from './pages/Series/Series';
+import Search from './pages/Search/Search';
 
 function App() {
   return (
