@@ -1,15 +1,10 @@
 import './App.css';
-import Movie from './components/Movie';
+import Header from './components/Header/Header';
 
 function App() {
-
-  const movies = ["1", "2", "3"];
-
   return (
     <div className="app">
-       {movies.map((movie) => (
-         <Movie />
-       ))}
+       <Header />
     </div>
   );
 }
