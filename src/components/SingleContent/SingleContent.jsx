@@ -1,8 +1,10 @@
 import './siglecontent.css';
 
-const SingleContent = () => {
+const SingleContent = ({ id, poster, title, date, media_type, vote_average}) => {
   return (
-  
+     <div>
+
+     </div>
   );
 };
 
