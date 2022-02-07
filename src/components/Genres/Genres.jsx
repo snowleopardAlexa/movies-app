@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "./genres.css";
 import axios from "axios";
 import { Chip } from "@material-ui/core";
 
