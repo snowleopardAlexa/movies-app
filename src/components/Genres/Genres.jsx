@@ -1,8 +1,8 @@
 import './genres.css';
 
-const Genres = () => {
+const Genres = ({ selectedGenres, setSelectedGenres, setGenres, type, setPage}) => {
   return (
-  
+    <div>Genres</div>
   );
 };
 
