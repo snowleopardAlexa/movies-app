@@ -48,7 +48,7 @@ const Series = () => {
              poster={content.poster_path}
              title={content.title || content.name}
              date={content.first_air_date || content.release_date}
-             media_type={content.media_type}
+             media_type="tv"
              vote_average={content.vote_average}
           />
          ))}
