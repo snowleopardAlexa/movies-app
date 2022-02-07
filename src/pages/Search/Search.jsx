@@ -42,6 +42,10 @@ const Search = () => {
              <SearchIcon />
          </Button>
          </div> 
+         <Tabs value={type} indicatorColor="primary" textColor="primary">
+           <Tab style={{ width: "50%" }} label="Search Movies" />
+           <Tab style={{ width: "50%" }} label="Search TV Series" />
+         </Tabs>
          </ThemeProvider>
      </div>
     );
