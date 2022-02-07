@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './movies.css';
 import axios from 'axios';
 import CustomPagination from '../../components/CustomPagination/CustomPagination';
-
+import SingleContent from '../../components/SingleContent/SingleContent';
 
 const Movies = () => {
 
@@ -40,7 +40,9 @@ const Movies = () => {
           />
          ))}
        </div>
+       {numOfPages > 1 && (
        <CustomPagination setPage={setPage} numOfPages={numOfPages} />
+       )}
      </div>
     );
   };
