@@ -4,6 +4,7 @@ import axios from 'axios';
 import CustomPagination from '../../components/CustomPagination/CustomPagination';
 import SingleContent from '../../components/SingleContent/SingleContent';
 import Genres from "../../components/Genres/Genres";
+import useGenre from "../../hooks/useGenre";
 
 const Movies = () => {
 
@@ -12,6 +13,7 @@ const Movies = () => {
   const [numOfPages, setNumOfPages] = useState();
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [genres, setGenres] = useState([]);
+  const generateforUrl = useGenre(selectedGenres);
 
   const fetchMovies = async () => {
       const { data } = await axios.get (
@@ -25,7 +27,7 @@ const Movies = () => {
   useEffect(() => {
       fetchMovies();
        // eslint-disable-next-line
-  }, [page]);
+  }, [page, generateforUrl]);
 
     return (
      <div>
