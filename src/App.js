@@ -7,12 +7,10 @@ import Trending from './pages/Trending/Trending';
 import Movies from './pages/Movies/Movies';
 import Series from './pages/Series/Series';
 import Search from './pages/Search/Search';
-import ArrowCircleUpOutlinedIcon from '@mui/icons-material/ArrowCircleUpOutlined';
 
 function App() {
   return (
     <>
-  
     <Header />
     <div className="app">
       <Container>
@@ -22,10 +20,9 @@ function App() {
         <Route path="/series" element={<Series />} />
         <Route path="/search" element={<Search />} />
       </Routes>
-      <ArrowCircleUpOutlinedIcon />
       </Container>
-    </div>
     <BottomNav />
+    </div>
     </>
   );
 }
