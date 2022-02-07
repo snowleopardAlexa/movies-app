@@ -6,11 +6,11 @@ import {
     TextField,
     ThemeProvider,
   } from "@material-ui/core";
-  import "./Search.css";
+  import "./search.css";
   import SearchIcon from "@material-ui/icons/Search";
   import { useEffect, useState } from "react";
   import axios from "axios";
-  import CustomPagination from "../../components/Pagination/CustomPagination";
+  import CustomPagination from "../../components/CustomPagination/CustomPagination";
   import SingleContent from "../../components/SingleContent/SingleContent";
 
 const Search = () => {
@@ -55,7 +55,6 @@ const Search = () => {
      <div>
          <ThemeProvider theme={darkTheme}>
          <div style={{display: "flex", margin: "15px 0px"}}>  
-         <span className="pageTitle">Search</span>
          <TextField 
            style={{ flex: 1}}
            className="searchBox"
@@ -63,7 +62,11 @@ const Search = () => {
            variant="filled"
            onChange={(e) => setSearchText(e.target.value)}
          />
-         <Button variant='contained' style={{marginLeft: 10}}>
+         <Button 
+           variant='contained' 
+           style={{marginLeft: 10}}
+           onClick={fetchSearch}
+        >
              <SearchIcon />
          </Button>
          </div> 
@@ -81,6 +84,26 @@ const Search = () => {
            <Tab style={{ width: "50%" }} label="Search TV Series" />
          </Tabs>
          </ThemeProvider>
+         <div className="trending">
+         {content &&
+          content.map((c) => (
+            <SingleContent
+              key={c.id}
+              id={c.id}
+              poster={c.poster_path}
+              title={c.title || c.name}
+              date={c.first_air_date || c.release_date}
+              media_type={type ? "tv" : "movie"}
+              vote_average={c.vote_average}
+            />
+          ))}
+        {searchText &&
+          !content &&
+          (type ? <h2 className="no-found">No Series Found</h2> : <h2 className="no-found">No Movies Found</h2>)}
+      </div>
+         {numOfPages > 1 && (
+        <CustomPagination setPage={setPage} numOfPages={numOfPages} />
+      )}
      </div>
     );
   };
