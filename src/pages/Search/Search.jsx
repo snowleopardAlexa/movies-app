@@ -28,6 +28,8 @@ const Search = () => {
 
     return (
      <div>
+         <ThemeProvider theme={darkTheme}>
+         <div style={{display: "flex", margin: "15px 0px"}}>  
          <span className="pageTitle">Search</span>
          <TextField 
            style={{ flex: 1}}
@@ -36,6 +38,11 @@ const Search = () => {
            variant="filled"
            // onChange={(e) => setSearchText(e.target.value)}
          />
+         <Button variant='contained' style={{marginLeft: 10}}>
+             <SearchIcon />
+         </Button>
+         </div> 
+         </ThemeProvider>
      </div>
     );
   };
