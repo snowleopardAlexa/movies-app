@@ -14,8 +14,16 @@ const Genres = ({
 
   const handleAdd = (genre) => {
     setSelectedGenres([...selectedGenres, genre]);
-    setGenres(genres.filter((genre) => genre.id !== genre.id));
+    setGenres(genres.filter((genre) => genre.id));
     setPage(1);
+  };
+
+  const handleRemove = (genre) => {
+      setSelectedGenres(
+          selectedGenres.filter((selected) => selected.id !== genre.id)
+      );
+      setGenres([...genres, genre]);
+      setPage(1);
   };
 
   const fetchGenres = async () => {
@@ -46,6 +54,7 @@ const Genres = ({
             size="small"
             color="primary"
             key={genre.id}
+            onDelete={() => handleRemove(genre)}
           />
         ))}
         {genres &&
