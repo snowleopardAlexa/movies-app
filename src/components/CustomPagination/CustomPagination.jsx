@@ -1,12 +1,5 @@
 import './custompagination.css';
 import Pagination from "@material-ui/lab/Pagination";
-import { createTheme, ThemeProvider } from '@mui/material';
-
-const darkTheme = createTheme ({
-  palette: {
-    type: 'dark'
-  }
-})
 
 const CustomPagination = ({ setPage, numOfPages = 10 }) => {
 
@@ -17,7 +10,6 @@ const CustomPagination = ({ setPage, numOfPages = 10 }) => {
 
   return (
     <div>
-        <ThemeProvider theme={darkTheme}>
           <Pagination 
             className="pagination"
             count={numOfPages} 
@@ -26,7 +18,6 @@ const CustomPagination = ({ setPage, numOfPages = 10 }) => {
             hidePrevButton
             color="primary"
           />
-        </ThemeProvider>
     </div>
   );
 };
